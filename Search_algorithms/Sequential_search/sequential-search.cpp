@@ -1,7 +1,7 @@
 #include <iostream>
 #include <chrono>
 #include <random>
-#include "vectorAlgorithms.hpp"
+#include "../includes/vectorAlgorithms.hpp"
 
 int main(void)
 {
@@ -23,22 +23,26 @@ int main(void)
 	for(int i=0;i<a_generar;i++)
 	{
 		generado = distribution(generator);
-		std::cout << generado << std::endl;
+		//std::cout << generado << std::endl;
 		datos.push_back(generado);
 	}
 	
+	std::cout << " [i] " << a_generar << " Elementos generados" << std::endl;
+
+
 	std::cout << " Ingrese un numero entero : ";
 	std::cin >> elemento;
 	
 	t_start = std::chrono::system_clock::now();
 
-	bResult = isOnTheVector(datos,elemento,cuantos);
+	bResult = /*vectorAlgorithms::*/isOnTheVector(datos,elemento,cuantos);
 
 	t_end = std::chrono::system_clock::now();
 
 	if(bResult == true )
 	{
 		std::cout << "\t[y] El elemento " << elemento << " esta en el vector" << std::endl;
+		std::cout << "\t Lo conte " << cuantos << " veces" << std::endl;
 	}
 	else
 	{
