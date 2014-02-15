@@ -6,7 +6,7 @@ This repo contains the basic algorithms related to the C3 course but Object Orie
 
 collaborators
 =============
-[muzgash](https://github.com/muzgash)
-[MaldicionChina](https://github.com/MaldicionChina)
-[omazapa](https://github.com/omazapa)
-[Daniel-M](https://github.com/Daniel-M)
+[muzgash](https://github.com/muzgash)  
+[MaldicionChina](https://github.com/MaldicionChina)  
+[omazapa](https://github.com/omazapa)  
+[Daniel-M](https://github.com/Daniel-M)  
