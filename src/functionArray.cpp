@@ -1,12 +1,10 @@
 // Busqueda Secuencial
 // Estoy aprendiendo a utilizar Templates
 #include <array>
+#include <functionArray.hpp>
 
-template <class T>
-class functionArray<T>
-{
-
-bool secuencial(const std::array<T> *busqueda, T *dato, T inicio, T fin){
+template <class T, int n>
+bool secuencial(std::array<T,n> busqueda ,T dato,int inicio,int fin){
 	
 	int contador = 0; // Variable contador  veces que está el dato buscado en el array
 
@@ -22,7 +20,8 @@ bool secuencial(const std::array<T> *busqueda, T *dato, T inicio, T fin){
 	return false;
 }
 
-bool binomial(const std::array<T> *busqueda, T *dato, T inicio, T fin){
+template <class T, int n>
+bool binomial(std::array<T,n> busqueda,T dato,int inicio,int fin){
 	
 	bool res; // respuesta del algoritmo
 
@@ -31,11 +30,11 @@ bool binomial(const std::array<T> *busqueda, T *dato, T inicio, T fin){
 		int mitad = ( inicio + fin )/2;
 		if(dato < busqueda)
 		{
-			res = binomial(busqueda,dato,inicio,m-1)
+			res = functionArray<T,n>::binomial(busqueda,dato,inicio,mitad-1);
 		}
 		else if(dato > busqueda)
 		{
-			res = binomial(busqueda,dato,m+1,fin)
+			res = functionArray<T,n>::binomial(busqueda,dato,mitad+1,fin);
 		}
 		else
 		{
@@ -48,7 +47,5 @@ bool binomial(const std::array<T> *busqueda, T *dato, T inicio, T fin){
 	}
 	
 	return res;
-}
-
 }
 

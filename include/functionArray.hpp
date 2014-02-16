@@ -3,12 +3,11 @@
 
 #include <array>
 
-
-template<class T>
-class functionArray<T>
+template<class T,int n>
+class functionArray
 {
 	public:
-	bool secuencial(const std::array<T> *, T *, T,T);
-	bool binomial(const array<T> *, T *, T, T);
+	bool secuencial(std::array<T,n>& busqueda ,T& dato,int inicio,int fin);
+	/*bool binomial(std::array<T,n>& busqueda ,T& dato,int inicio,int fin);*/
 };
 #endif
